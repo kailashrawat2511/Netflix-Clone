@@ -193,6 +193,25 @@ input[type="text"]:focus {
   width: 86%;
 }
 
+/* 2nd Video Styling */
+.first .secImg1 {
+  position: relative;
+}
+
+.secImg1 img {
+  width: 500px;
+  position: relative;
+  z-index: 10;
+  margin-top: 20px;
+}
+
+.secImg1 video {
+  position: absolute;
+  top: 38px;
+  left: 94px;
+  width: 61%;
+}
+
 .second > div:nth-child(1) {
   max-width: 75%;
   margin: auto;
