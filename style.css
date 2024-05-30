@@ -1,0 +1,469 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #b3b3ac;
+}
+
+body {
+  background-color: black;
+}
+
+.main {
+  background-image: url(assets/images/hero.jpg);
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: max(1000px, 100vw);
+  background-size: cover;
+  position: relative;
+}
+
+.main .box {
+  background-color: black;
+  height: 90vh;
+  width: 100%;
+  opacity: 0.57;
+  position: absolute;
+  top: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  max-width: 1000px;
+  gap: 10px;
+  height: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav img {
+  color: #e50914;
+}
+
+.btn {
+  background-color: #e50914;
+  padding: 7px 15px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #cb0812;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+select {
+  background: rgba(23, 23, 23, 0.2);
+  color: #fff;
+  border: 1px solid #b3b3ac;
+  padding: 3px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.nav > span {
+  display: flex;
+  gap: 15px;
+}
+
+.hero {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100% - 80px);
+  gap: 20px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero > span > :nth-child(1) {
+  font-size: 48px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.hero > span > :nth-child(2) {
+  font-size: 26px;
+  font-weight: 400; 
+}
+
+.hero > span > :nth-child(3) {
+  font-size: 20px;
+  font-weight: 400; 
+}
+
+.btn-lg-red {
+  font-size: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.banner-cont {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+  z-index: 10;
+}
+
+.btn-email {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 11px 150px 10px 11px;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.banner-cont > .btn-email > ::placeholder {
+  background: rgba(23, 23, 23, 0.2);
+  outline: none;
+  border-style: none;
+  color: #fff;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.fa-angle-right {
+  padding: 8px 13px;
+}
+
+.separation {
+  height: 9px;
+  background-color: #2b2929;
+  position: relative;
+  z-index: 20;
+}
+
+/* first section styling */
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1026px;
+  margin: 20px auto;
+  color: #fff;
+  position: relative;
+}
+
+.first h2 {
+  font-size: 48px;
+  font-weight: 700;
+  padding-top: 40px 0;
+}
+
+.first p {
+  font-size: 24px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.first .secImg {
+  position: relative;
+}
+
+.secImg img {
+  width: 500px;
+  position: relative;
+  z-index: 10;
+}
+
+.secImg video {
+  position: absolute;
+  top: 64px;
+  left: 68px;
+  width: 86%;
+}
+
+.second > div:nth-child(1) {
+  max-width: 75%;
+  margin: auto;
+}
+
+.second > div:nth-child(2) {
+  max-width: 85%;
+  margin: auto;
+}
+
+.boxshot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid grey;
+  border-radius: 10px;
+  max-width: 60%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.boxshot img {
+  width: 58px;
+}
+
+.text .gif {
+  width: 45px;
+}
+
+.boxshot > .text > :first-child {
+  font-size: 16px;
+  color: #fff;
+  padding-top: 0px;
+}
+
+.text > :nth-child(2) {
+  font-size: 14px;
+  color: #0071eb;
+}
+
+/* FAQ STYLING */
+.faq h2 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  padding: 30px 0px;
+  transition: 0.3s ease;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  max-width: 900px;
+  margin: 9px auto;
+  background-color: #343232e3;
+  padding: 20px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.card-icon:hover{
+   background-color: #414141;
+   cursor: pointer;
+   transition: 0.3s ease-in-out;
+}
+
+.card-icon p {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* FOOTER STYLING */
+footer{
+  margin-bottom: 20px;
+}
+
+footer span{
+  color: #b3b3ac;
+  display: flex;
+  max-width: 65vw;
+  margin:  30px auto;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  max-width: 65vw;
+  margin: 10px auto;
+  color:#b3b3ac;
+}
+
+.d-flex p{
+  padding:7px 0px;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  color:#b3b3ac;
+}
+
+
+/* media query */
+
+@media only screen and (max-width: 1020px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 80vw;
+    transition: 0.3s;
+  }
+
+  .d-flex {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .hero > span > :nth-child(1) {
+    font-size: 35px;
+    transition: 0.3s;
+  }
+
+  .hero > span > :nth-child(2) {
+    text-align: center;
+    font-size: 22;
+    transition: 0.3s;
+  }
+
+  .hero > span > :nth-child(3) {
+    text-align: center;
+    font-size: 17;
+    transition: 0.3s;
+  }
+
+  .first {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0px;
+  }
+
+  .first > div :nth-child(1) {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .first > div > p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .third {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  .second {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  .boxshot {
+    margin-bottom: 30px;
+    max-width: 72%;
+    transition: 0.3s;
+  }
+
+  .card-icon {
+    max-width: 700px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .faq h2 {
+    font-size: 32px;
+    font-weight: 700;
+    transition: 0.3s ease;
+  }
+
+  .card-icon p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .accordion {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .card-icon {
+    max-width: 550px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 726px) {
+  .hero > span > :nth-child(1) {
+    font-size: 28px;
+    transition: 0.3s;
+  }
+
+  .hero > span > :nth-child(2) {
+    text-align: center;
+    font-size: 0;
+    transition: 0.3s;
+  }
+
+  .hero > span > :nth-child(3) {
+    text-align: center;
+    font-size: 16;
+    transition: 0.3s;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .card-icon {
+    max-width: 400px;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .btn-email {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-lg-red {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .banner-cont {
+    display: flex;
+    flex-direction: column;
+    padding: 19px 0px;
+  }
+
+  .hero > span > :nth-child(1) {
+    padding-top: 73px;
+  }
+}
+/* 
+@media only screen and (max-width: 573px) {
+  .hero > span > :nth-child(1) {
+    font-size: 22px;
+    transition: 0.3s;
+    text-align: center;
+  }
+
+  .hero > span > :nth-child(2) {
+    text-align: center;
+    font-size: 16;
+    transition: 0.3s;
+  }
+
+  .hero > span > :nth-child(3) {
+    text-align: center;
+    font-size: 14;
+    transition: 0.3s;
+  }
+} */
+
+@media only screen and (max-width: 573px) {
+  select {
+    display: none;
+  }
+
+}
