@@ -100,12 +100,12 @@ select {
 
 .hero > span > :nth-child(2) {
   font-size: 26px;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .hero > span > :nth-child(3) {
   font-size: 20px;
-  font-weight: 400; 
+  font-weight: 400;
 }
 
 .btn-lg-red {
@@ -124,11 +124,15 @@ select {
 
 .btn-email {
   background: transparent;
-  border: 1px solid #fff;
+  border:1px solid rgba(22, 22, 22, 0.7);
   padding: 11px 150px 10px 11px;
   color: #fff;
   border-radius: 5px;
   transition: 0.2s ease;
+  background: rgba(22, 22, 22, 0.7);
+  border-color: rgba(128, 128, 128, 0.7);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .banner-cont > .btn-email > ::placeholder {
@@ -262,40 +266,74 @@ input[type="text"]:focus {
   transition: 0.3s ease;
 }
 
-.card-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* accordion styling */
+.accordion{
+ display:flex;
+ justify-content: space-around;
+ align-items: center;
   color: #fff;
-  max-width: 900px;
-  margin: 9px auto;
-  background-color: #343232e3;
-  padding: 20px;
-  border-radius: 3px;
-  transition: 0.3s ease-in-out;
+  
 }
 
-.card-icon:hover{
-   background-color: #414141;
-   cursor: pointer;
-   transition: 0.3s ease-in-out;
+.accordion .container {
+  position: relative;
+  background: #2b2828;
+  padding: 22px 20px;
+  border-radius: 5px;
+  max-width: 70vw;
+  margin: 6px auto;
+  transition: 0.3s ease;
 }
 
-.card-icon p {
+.accordion .label {
+  position: relative;
   font-size: 24px;
-  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.accordion .label::before {
+  content: '+';
+  color: #fff;
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+}
+
+.accordion .content {
+  position: relative;
+  background: #2b2828;
+  height:0;
+  font-size: 24px;
+  text-align: justify;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+.accordion .container.active .content {
+  height:auto;
+  padding-top: 25px;
+}
+
+.accordion .container.active .label::before {
+  content: '-';
 }
 
 /* FOOTER STYLING */
-footer{
+footer {
   margin-bottom: 20px;
 }
 
-footer span{
+footer span {
   color: #b3b3ac;
   display: flex;
   max-width: 65vw;
-  margin:  30px auto;
+  margin: 30px auto;
 }
 
 .d-flex {
@@ -303,17 +341,16 @@ footer span{
   justify-content: space-between;
   max-width: 65vw;
   margin: 10px auto;
-  color:#b3b3ac;
+  color: #b3b3ac;
 }
 
-.d-flex p{
-  padding:7px 0px;
+.d-flex p {
+  padding: 7px 0px;
   font-size: 14px;
   text-decoration: underline;
   cursor: pointer;
-  color:#b3b3ac;
+  color: #b3b3ac;
 }
-
 
 /* media query */
 
@@ -398,9 +435,27 @@ footer span{
     font-weight: 400;
   }
 
-  .accordion {
-    width: 24px;
-    height: 24px;
+  .accordion .container {
+    max-width: 80%;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  }
+
+  .accordion .content{
+    font-size: 18px;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  }
+
+  .accordion .label{
+    font-size: 18px;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  }
+  
+  .accordion .label::before {
+    content: '+';
+    color: #fff;
+    position: absolute;
+    font-size: 24px;
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
   }
 }
 
@@ -430,6 +485,12 @@ footer span{
   }
 }
 
+@media only screen and (max-width:676px){
+  .accordion .container.active .content {
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   .card-icon {
     max-width: 400px;
@@ -438,11 +499,6 @@ footer span{
 }
 
 @media only screen and (max-width: 620px) {
-  .btn-email {
-    display: flex;
-    flex-direction: column;
-  }
-
   .btn-lg-red {
     display: flex;
     align-items: center;
@@ -451,7 +507,6 @@ footer span{
 
   .banner-cont {
     display: flex;
-    flex-direction: column;
     padding: 19px 0px;
   }
 
@@ -480,9 +535,46 @@ footer span{
   }
 } */
 
-@media only screen and (max-width: 573px) {
+@media only screen and (max-width: 577px) {
   select {
     display: none;
   }
 
+  .banner-cont {
+    flex-direction: column;
+  }
+
+  .btn-lg-red {
+    max-width: 37vw;
+    margin: 6px auto;
+    font-size: 18px;
+    transition: 0.2s ease;
+    margin-bottom: 60px;
+  }
+
+  ::placeholder {
+    font-size: 16px;
+    font-family: 500;
+  }
+
+  .btn-email {
+    width: 46vw;
+    height: 26px;
+    background: rgba(22, 22, 22, 0.7);
+    border-color: rgba(128, 128, 128, 0.7);
+  }
+
+  .accordion .container.active .content {
+    font-size: 18px;
+  }
+
+  .accordion .container.active .label {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:430px){
+  .hero > span > :nth-child(1){
+    padding-top: 73px;
+  }
 }

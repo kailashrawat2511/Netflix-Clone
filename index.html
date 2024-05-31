@@ -123,11 +123,58 @@
     <div class="separation"></div>
     <div class="faq">
       <h2>Frequently Asked Questions</h2>
-      <div class="card-icon">
-        <p>What is Netflix?</p>
-        <img src="assets/images/logo2.svg" alt="" class="accordion"/>
+      <!-- <div class="card-icon"> -->
+        <!-- <p>What is Netflix?</p>
+        <img src="assets/images/logo2.svg" alt="" class="accordion"/> -->
+        <!-- <div class="label">What is Netflix?</div>
+        <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
+      </div> -->
+      <div class="accordion">
+        <div class="container">
+          <div class="label">What is Netflix?</div>
+          <div class="content">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.<br><br>
+            You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!
+          </div>
+        </div>
       </div>
-      <div class="card-icon">
+      <div class="accordion">
+        <div class="container">
+          <div class="label">How much does Netflix cost?</div>
+          <div class="content">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="container">
+          <div class="label">Where can I watch?</div>
+          <div class="content">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.<br><br>
+            You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="container">
+          <div class="label">How do I cancel?</div>
+          <div class="content">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="container">
+          <div class="label">What can I watch on Netflix?</div>
+          <div class="content">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+          </div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="container">
+          <div class="label">Is Netflix good for kids?</div>
+          <div class="content">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.<br><br>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- <div class="card-icon">
         <p>How much does Netflix cost?</p>
         <img src="assets/images/logo2.svg" alt="" class="accordion"/>
       </div>
@@ -146,7 +193,7 @@
       <div class="card-icon">
         <p>Is Netflix good for kids?</p>
         <img src="assets/images/logo2.svg" alt=""  class="accordion"/>
-      </div>
+      </div> -->
     </div>
     <div class="hero" style="margin:55px 0px;">
         Ready to watch? Enter your email to create or restart your
@@ -199,5 +246,14 @@
         </div>
         <p class="d-flex">Netflix India</p>
       </footer>
+      <script>
+         const accordion = document.getElementsByClassName('container');
+
+for (i=0; i<accordion.length; i++) {
+  accordion[i].addEventListener('click', function () {
+    this.classList.toggle('active')
+  })
+}
+      </script>
   </body>
 </html>
